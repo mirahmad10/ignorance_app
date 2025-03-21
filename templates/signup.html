@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}">
+  </head>
+  <body>
+    <div class="signup-container">
+      <form action="">
+        <h1>Sign up</h1>
+        <div class="inputbox">
+          <input type="email" name="email" id="email" placeholder="xyz@mir.com" required class="textBox">
+          <i class='bx bxs-envelope'></i>
+        </div>
+        <br>
+        <div class="inputbox">
+          <input type="text" name="username" id="username" placeholder="username" required class="textBox">
+          <i class='bx bxs-user'></i> 
+        </div>
+        <br>
+        <div class="inputbox">
+          <input type="password" name="password" id="password" placeholder="Must contain 8 characters" required maxlength="8" minlength="8" class="textBox">
+          <i class='bx bxs-lock-alt'></i>
+        </div>
+        <br>
+        <div class="submit-btn-div">
+          <input type="submit" required class="submitBtn">
+        </div>
+      </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/signup.js') }}"></script>
+  </body>
+</html>

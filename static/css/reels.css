@@ -1,0 +1,281 @@
+body {
+  padding-bottom: 80px;
+  font-family: 'inter', sans-serif;
+  font-size: 2em;
+  background-color: #94abbd;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.questionP {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.content-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #556e84;
+  width: 100%;
+  height: 75px;
+  z-index: 1000;
+}
+
+.logout-btn {
+  background-color: #556e84;
+  margin-left: 1em;
+  font-size: 1em;
+  border: none;
+  padding: 5px 10px 0px 5px;
+  border-radius: 15px;
+  transition: background-color 0.15s ease;
+}
+
+.logout-btn:hover {
+  background-color: #4d6377;
+  cursor: pointer;
+}
+
+.logout-btn:active {
+  background-color: #445768;
+  cursor: pointer;
+}
+
+.right-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.bxs-help-circle {
+  margin-right: 1em;
+  margin-left: 10px;
+}
+
+.question-grid {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+}
+
+.question-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.question-card,
+.videoContainer {
+  width: 80%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  scroll-snap-align: start;
+}
+
+.videoContainer {
+  position: relative;
+  width: 90vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 75px;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.video-controls {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  z-index: 2;
+}
+
+.video-controls button {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.video-controls button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.options {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+
+.optBtn {
+  height: 80%;
+  width: 25%;
+  padding: 10px 15px;
+  border: solid 2px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  background-color: #f3f3f3;
+  color: rgb(0, 0, 0);
+}
+
+.right {
+  background-color: rgba(43, 175, 76, 0.8);
+  color: white;
+}
+
+.wrong {
+  background-color: rgba(235, 24, 24, 0.8);
+  color: white;
+}
+
+.button-grid {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: #556e84;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.home-btn,
+.leaderboard-btn,
+.reels-btn {
+  background-color: #556e84;
+  border: none;
+  padding: 5px 10px;
+  height: auto;
+  color: white;
+  font-size: 1.5em;
+  transition: background-color 0.15s ease;
+}
+
+.home-btn:hover,
+.leaderboard-btn:hover,
+.reels-btn:hover {
+  background-color: #4d6377;
+  cursor: pointer;
+}
+
+.home-btn:active,
+.leaderboard-btn:active,
+.reels-btn:active {
+  background-color: #445768;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.2em;
+  }
+
+  .question-grid {
+    width: 100%;
+  }
+
+  .button-grid {
+    height: 50px;
+  }
+
+  .header {
+    height: 65px;
+  }
+
+  .optBtn {
+    width: 40%;
+  }
+
+  .question-card,
+  .videoContainer {
+    width: 40%;
+    height: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1em;
+  }
+
+  .question-grid {
+    width: 100%;
+  }
+
+  .button-grid {
+    height: 50px;
+  }
+
+  .header {
+    height: 65px;
+  }
+
+  .optBtn {
+    width: 40%;
+  }
+}
+
+@media (min-width: 769px) {
+  body {
+    font-size: 1.5em;
+  }
+
+  .question-grid {
+    width: 100%;
+  }
+
+  .question-card,
+  .videoContainer {
+    width: 40%;
+  }
+}

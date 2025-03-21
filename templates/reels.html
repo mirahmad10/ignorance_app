@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reels.css') }}">
+  </head>
+  <body>
+    <div class="content-grid">
+      <div class="header">
+        <div class="left-header">
+          <a href="/index">
+            <button class="logout-btn">
+              <i class='bx bx-log-out'></i>
+            </button>
+          </a>
+        </div>
+        <div class="right-header">
+          <p style="color: white;">Need help? </p>
+          <a href="support.html" target="">
+            <i class='bx bxs-help-circle'></i>
+          </a>
+        </div>
+      </div>
+      <div class="question-grid">
+        <div class="question-card">
+          <p class="questionP">Which region has seen the fastest economic growth in the past 20 years?</p>
+          <div class="options">
+            <button class="optBtn" id="op1">North America</button>
+            <button class="optBtn correct" id="op2">Africa</button>
+          </div>
+        </div>
+        <div class="videoContainer">
+          <video src="{{ url_for('static', filename='videos/qs_2.mp4') }}" class="video" muted></video>
+          <div class="video-controls">
+            <button class="mute-btn" onclick="toggleMute(this)">
+              <i class="bx bx-volume-full"></i> 
+            </button>
+            <button class="play-pause-btn" onclick="togglePlayPause(this)">
+              <i class="bx bx-play"></i> 
+            </button>
+          </div>
+        </div>
+        
+        <div class="question-card">
+          <p class="questionP">In which region do women have the highest percentage of university graduates?</p>
+          <div class="options">
+            <button class="optBtn" id="op1">Europe</button>
+            <button class="optBtn correct" id="op2">Middle East</button>
+          </div>
+        </div>
+        <div class="videoContainer">
+          <video src="{{ url_for('static', filename='videos/qs_3.mp4') }}" class="video" muted></video>
+          <div class="video-controls">
+            <button class="mute-btn" onclick="toggleMute(this)">
+              <i class="bx bx-volume-full"></i> 
+            </button>
+            <button class="play-pause-btn" onclick="togglePlayPause(this)">
+              <i class="bx bx-play"></i> 
+            </button>
+          </div>
+        </div>
+        
+        <div class="question-card">
+          <p class="questionP">Which country produces more renewable energy per capita?</p>
+          <div class="options">
+            <button class="optBtn correct" id="op1">Iceland</button>
+            <button class="optBtn" id="op2">China</button>
+          </div>
+        </div>
+        <div class="videoContainer">
+          <video src="{{ url_for('static', filename='videos/qs_1_real.mp4') }}" class="video" muted></video>
+          <div class="video-controls">
+            <button class="mute-btn" onclick="toggleMute(this)">
+              <i class="bx bx-volume-full"></i> 
+            </button>
+            <button class="play-pause-btn" onclick="togglePlayPause(this)">
+              <i class="bx bx-play"></i> 
+            </button>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="button-grid">
+        <a href="/home">
+          <button class="home-btn">
+            <i class='bx bx-home-alt'></i>
+          </button>
+        </a>
+        <a href="/reels">
+          <button class="reels-btn">
+            <i class='bx bx-play'></i>
+          </button>
+        </a>
+        <a href="/leaderboard">
+          <button class="leaderboard-btn">
+            <i class='bx bx-objects-vertical-bottom'></i>
+          </button>
+        </a>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/reelss.js') }}"></script>
+  </body>
+</html>

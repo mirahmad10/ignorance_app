@@ -1,0 +1,158 @@
+body {
+  padding-bottom: 80px;
+  font-family: 'inter', sans-serif;
+  font-size: 2em;
+  background-color: #94abbd;
+}
+
+p {
+  display: inline-block;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #556e84;
+  width: 100%;
+  height: 75px;
+}
+
+.logout-btn {
+  background-color: #556e84;
+  margin-left: 1em;
+  font-size: 1em;
+  border: none;
+  padding: 5px 10px 0px 5px;
+  border-radius: 15px;
+  transition: background-color 0.15s ease;
+}
+
+.logout-btn:hover {
+  background-color: #4d6377;
+  cursor: pointer;
+}
+
+.logout-btn:active {
+  background-color: #445768;
+  cursor: pointer;
+}
+
+.right-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.bxs-help-circle {
+  margin-right: 1em;
+  margin-left: 10px;
+}
+
+.content-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding-top: 75px;
+}
+
+.profile-grid {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pfp {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.pfp-grid {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.user-info-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-grid {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: #556e84;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.home-btn,
+.leaderboard-btn,
+.reels-btn {
+  background-color: #556e84;
+  border: none;
+  padding: 5px 10px 5px 10px;
+  height: 100%;
+  color: white;
+  font-size: 1.5em;
+  transition: background-color 0.15s ease;
+}
+
+.home-btn:hover,
+.leaderboard-btn:hover,
+.reels-btn:hover {
+  background-color: #4d6377;
+  cursor: pointer;
+}
+
+.home-btn:active,
+.leaderboard-btn:active,
+.reels-btn:active {
+  background-color: #445768;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.2em;
+  }
+
+  .button-grid {
+    height: 50px;
+  }
+
+  .header {
+    height: 65px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1em;
+  }
+
+  .button-grid {
+    height: 50px;
+  }
+
+  .header {
+    height: 65px;
+  }
+}

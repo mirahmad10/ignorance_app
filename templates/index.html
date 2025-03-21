@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+  </head>
+  <body>
+    <div class="login-promt">
+      <form action="/" method="POST">
+        <h1>Login</h1>
+        <div class="inputbox">
+          <input type="text" name="username" id="username" placeholder="username" required class="textBox">
+          <i class='bx bxs-user'></i>       
+        </div>
+        <br>
+        <div class="inputbox">
+          <input type="password" name="password" id="password" placeholder="password" required class="textBox">
+          <i class='bx bxs-lock-alt'></i>
+        </div>
+        <br>
+        <div class="remember-forget">
+          <label for="remember">
+            Remember me:
+          </label>
+          <input type="checkbox" name="remember" id="remember">
+          <br>
+          <a href="">Forgot password?</a>
+        </div>
+        <br>
+        <div class="submit-btn-div">
+          <input type="submit" required class="submitBtn">
+        </div>
+        <div class="register-link">
+          <p>Don't have an account?           
+            <a href="/signup">Join us!</a>
+          </p>
+        </div>
+      </form>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
